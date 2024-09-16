@@ -1,0 +1,6 @@
+numpy
+matplotlib
+seaborn
+mediapy
+dm_control
+ipykernel
