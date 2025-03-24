@@ -1,11 +1,12 @@
-# ExtraPhi
+# Alpha Labs
 
-Physics Simulations as an Additonal Aprroach to Study Physics
+Physics Simulations as an additonal approach to Study Physics. They are intended to be covered as an extra assignments before laboratory works.
 
 # Run
 
 ## Google Colab
 
+[Google Colab](https://colab.research.google.com/) is a free and open platform for Python Jupyter Notebook like programming, hence all simulations can be run there.
 
 ### **Kinematics**
 
