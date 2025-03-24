@@ -6,16 +6,46 @@ Physics Simulations as an Additonal Aprroach to Study Physics
 
 ## Google Colab
 
-### Mechanics
 
-#### **Kinematics**
+### **Kinematics**
 
-- 1D Motion:
+#### 1D Motion
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/commanderxa/extraphi/blob/main/mechanics/kinematics/1d_motion.ipynb)
-- 2D Motion:
+#### 2D Motion
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/commanderxa/extraphi/blob/main/mechanics/kinematics/2d_motion.ipynb)
-- Free Fall:
+#### Free Fall
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/commanderxa/extraphi/blob/main/mechanics/kinematics/free_fall.ipynb)
+
+
+### **Dynamics**
+
+#### Newton's First Law
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/commanderxa/extraphi/blob/main/mechanics/dynamics/newton_law_1.ipynb)
+
+#### Newton's Second Law
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/commanderxa/extraphi/blob/main/mechanics/dynamics/newton_law_2.ipynb)
+
+#### Newton's Third Law
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/commanderxa/extraphi/blob/main/mechanics/dynamics/newton_law_3.ipynb)
+
+#### Center of Mass
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/commanderxa/extraphi/blob/main/mechanics/dynamics/center_of_mass.ipynb)
+
+
+### **Momentum**
+
+#### Collisions
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/commanderxa/extraphi/blob/main/mechanics/momentum/collisions.ipynb)
+
+
+### **Statics**
+
+#### Inclined Plane
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/commanderxa/extraphi/blob/main/mechanics/statics/inclined_plane.ipynb)
+
+#### Lever
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/commanderxa/extraphi/blob/main/mechanics/statics/lever.ipynb)
+
 
 ## Locally
 
