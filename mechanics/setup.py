@@ -50,4 +50,4 @@ def install_packages_colab():
     !command -v ffmpeg >/dev/null || (apt update && apt install -y ffmpeg)
     !pip install -q mediapy
 
-    !git clone https://github.com/commanderxa/extraphi.git
+    !git clone https://github.com/commanderxa/alphalabs.git
