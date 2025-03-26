@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Link } from "@heroui/link";
 import { collectionConfig } from "@/config/collection";
 import { ColabIcon } from "@/components/colab-icon";
+import { basePath } from "../../next.config";
 
 export default function CollectionPage() {
   return (
@@ -26,7 +27,7 @@ export default function CollectionPage() {
               >
                 <div className="relative w-full h-40 rounded-t-xl overflow-hidden">
                   <Image
-                    src={`/assets/${sim.img}`}
+                    src={`${basePath}/assets/${sim.img}`}
                     alt={sim.name}
                     fill
                     className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 pointer-events-none"
