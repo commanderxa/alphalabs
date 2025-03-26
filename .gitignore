@@ -166,3 +166,10 @@ cython_debug/
 !/output/*.md
 
 MUJOCO_LOG.TXT
+
+next-env.d.ts
+
+/node_modules
+out
+
+.next
