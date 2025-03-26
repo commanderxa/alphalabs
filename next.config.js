@@ -6,7 +6,9 @@ const nextConfig = {
     basePath: isProd ? "/alphalabs" : "",
     // assetPrefix: isProd ? "/alphalabs/out/" : "",
     images: {
-        unoptimized: true
+        unoptimized: true,
+        loader: 'default',
+        path: '/alphalabs/_next/image/',
     }
 };
 
