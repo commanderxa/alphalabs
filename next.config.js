@@ -7,8 +7,8 @@ const nextConfig = {
     assetPrefix: isProd ? "/alphalabs/" : "",
     images: {
         unoptimized: true,
-        loader: 'default',
-        path: '/alphalabs/_next/image/',
+        // loader: 'default',
+        // path: '/alphalabs/_next/image/',
     }
 };
 
