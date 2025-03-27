@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
 import { Link } from "@heroui/link";
 import { Snippet } from "@heroui/snippet";
 import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
+import { Popover, PopoverTrigger, PopoverContent } from "@heroui/react";
+
 import NextLink from "next/link";
-import { Image, Popover, PopoverTrigger, PopoverContent, } from "@heroui/react";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
-import { basePath } from "@/next.config";
 
 export default function Home() {
   return (
@@ -39,7 +39,7 @@ export default function Home() {
                 radius: "full",
                 variant: "solid",
               })}
-            // href={"#"}
+              // href={"#"}
             >
               Publication
             </Link>
@@ -47,7 +47,9 @@ export default function Home() {
           <PopoverContent>
             <div className="px-1 py-2">
               <div className="text-small font-bold">Coming soon!</div>
-              <div className="text-tiny">A paper will be linked once published.</div>
+              <div className="text-tiny">
+                A paper will be linked once published.
+              </div>
             </div>
           </PopoverContent>
         </Popover>
@@ -65,11 +67,9 @@ export default function Home() {
       <div className="mt-8">
         <Snippet hideCopyButton hideSymbol variant="bordered">
           <span>
-            Get started by viewing the {" "}
+            Get started by viewing the{" "}
             <Link as={NextLink} href={"/collection"}>
-              <Code color="primary">
-                collection
-              </Code>
+              <Code color="primary">collection</Code>
             </Link>
           </span>
         </Snippet>
