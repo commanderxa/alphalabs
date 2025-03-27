@@ -54,6 +54,7 @@ export default function AboutPage() {
                 key={idx}
                 aria-label={item.question}
                 title={item.question}
+                className="bg-default-100 dark:bg-default-50 shadow-none"
               >
                 <p className="text-default-500 leading-relaxed">
                   {item.answer}

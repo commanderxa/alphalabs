@@ -10,6 +10,10 @@ export const aboutConfig = {
       name: "Team",
       text: "The team was composed of a student and a physics professor from Astana IT University.",
     },
+    {
+      name: "License",
+      text: "AlphaLabs is licensed under the Apache License 2.0. You are free to use, modify, and distribute the software even for commercial use.",
+    },
   ],
   publications: {
     name: "Publications",
