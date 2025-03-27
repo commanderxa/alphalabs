@@ -33,5 +33,6 @@ export const siteConfig = {
   ],
   links: {
     github: "https://github.com/commanderxa/alphalabs",
+    mujoco: "https://mujoco.org/"
   },
 };

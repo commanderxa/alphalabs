@@ -22,14 +22,24 @@ export default function Home() {
         <span className={title()}>
           Through Dynamic
           <br />
-          Pre-Lab Simulations
+          Pre-Lab Simulations&nbsp;
         </span>
-        <div className={subtitle({ class: "mt-4" })}>
+        <div className={subtitle({ class: "mt-4 mb-0" })}>
           Computer tool designed to prepare you for laboratory success.
         </div>
+        <span className="">
+          <span>powered by&nbsp;</span>
+          <span>
+            <Link as={NextLink} href={siteConfig.links.mujoco} isExternal>
+              <Code className="font-bold" color="primary">
+                MuJoCo
+              </Code>
+            </Link>
+          </span>
+        </span>
       </div>
 
-      <div className="flex gap-3">
+      <div className="flex gap-3 mt-4">
         <Popover placement="left" showArrow={true}>
           <PopoverTrigger>
             <Link
