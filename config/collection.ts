@@ -4,23 +4,23 @@ export const collectionConfig = {
   groups: [
     {
       name: "Kinematics",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint  occaecat cupidatat non proident, sunt in culpa qui officia deserunt  mollit anim id est laborum.",
+      description: "Kinematics is the branch of mechanics that focuses on describing the motion of objects without considering the forces that cause this motion. It deals with parameters such as displacement (change in position), velocity (rate of change of position), and acceleration (rate of change of velocity). By analyzing these parameters, kinematics provides a framework to predict future motion based on initial conditions.",
       simulations: [
         {
             name: "1D Motion",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.",
+            description: "Explores linear motion along a single axis, illustrating concepts like uniform motion and constant acceleration.",
             img: "kinematics_1.png",
             href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/kinematics/1d_motion.ipynb"
         },
         {
             name: "2D Motion",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.",
+            description: "Examines motion in a plane, including projectile motion and the independence of horizontal and vertical components.",
             img: "kinematics_2.png",
             href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/kinematics/2d_motion.ipynb"
         },
         {
             name: "Free Fall",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.",
+            description: "Demonstrates the motion of objects under the influence of gravity alone, highlighting acceleration due to gravity.",
             img: "kinematics_3.png",
             href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/kinematics/free_fall.ipynb"
         },
@@ -28,29 +28,29 @@ export const collectionConfig = {
     },
     {
       name: "Dynamics",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint  occaecat cupidatat non proident, sunt in culpa qui officia deserunt  mollit anim id est laborum.",
+      description: "Dynamics extends beyond the description of motion to explore the causes behind it, primarily focusing on forces and torques. It is grounded in Newton's Laws of Motion, which relate the motion of an object to the forces acting upon it. Dynamics enables us to understand how interactions between objects influence their motion, providing insights into phenomena ranging from the motion of celestial bodies to the behavior of engineered systems.",
       simulations: [
         {
             name: "Newton's First Law",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.",
+            description: "Illustrates the principle of inertia, showing how objects remain at rest or in uniform motion unless acted upon by an external force.",
             img: "dynamics_1.png",
             href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/dynamics/newton_law_1.ipynb"
         },
         {
             name: "Newton's Second Law",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.",
+            description: "Demonstrates the relationship between force, mass, and acceleration, emphasizing how force influences motion.",
             img: "dynamics_2.png",
             href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/dynamics/newton_law_2.ipynb"
         },
         {
             name: "Newton's Third Law",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.",
+            description: "Explores action-reaction force pairs, showing how forces between two objects are equal in magnitude and opposite in direction.",
             img: "dynamics_3.png",
             href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/dynamics/newton_law_3.ipynb"
         },
         {
             name: "Center of Mass",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.",
+            description: "Examines the Center of Mass on randomly distributed objects in space with random masses.",
             img: "dynamics_4.png",
             href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/dynamics/center_of_mass.ipynb"
         },
@@ -58,11 +58,11 @@ export const collectionConfig = {
     },
     {
       name: "Momentum",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint  occaecat cupidatat non proident, sunt in culpa qui officia deserunt  mollit anim id est laborum.",
+      description: "Momentum is a fundamental concept that quantifies the motion of an object, defined as the product of its mass and velocity. It is a vector quantity, possessing both magnitude and direction. The principle of conservation of momentum states that in a closed system with no external forces, the total momentum remains constant. This principle is crucial in analyzing interactions such as collisions, where understanding momentum transfer helps predict post-collision velocities and directions.",
       simulations: [
         {
             name: "Collisions",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.",
+            description: "Investigates elastic and inelastic collisions, emphasizing the conservation of momentum and energy transfer during interactions.",
             img: "momentum_1.png",
             href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/momentum/collisions.ipynb"
         },
@@ -70,17 +70,17 @@ export const collectionConfig = {
     },
     {
       name: "Statics",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint  occaecat cupidatat non proident, sunt in culpa qui officia deserunt  mollit anim id est laborum.",
+      description: "Statics is the study of systems in equilibrium, where all forces and torques are balanced, resulting in no net motion. It involves analyzing how forces are distributed within structures to ensure they can withstand applied loads without moving. Statics is fundamental in engineering and architecture, as it ensures the stability and integrity of structures ranging from bridges to buildings.",
       simulations: [
         {
             name: "Lever",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.",
+            description: "Explores the mechanics of levers, demonstrating how forces and distances influence rotational equilibrium.",
             img: "statics_1.png",
             href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/statics/lever.ipynb"
         },
         {
             name: "Inclined Plane",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.",
+            description: "Examines the forces acting on objects on a slope, including gravitational components and normal force, to understand equilibrium conditions.",
             img: "statics_2.png",
             href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/statics/inclined_plane.ipynb"
         },

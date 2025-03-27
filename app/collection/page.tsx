@@ -35,7 +35,7 @@ export default function CollectionPage() {
                 </div>
                 <CardBody>
                   <h3 className="text-lg font-semibold mb-1">{sim.name}</h3>
-                  <p className="text-sm text-default-500 mb-4">{sim.description}</p>
+                  <p className="text-sm text-default-500 mb-4 line-clamp-2">{sim.description}</p>
                   <Button
                     isExternal
                     as={Link}

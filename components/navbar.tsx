@@ -12,9 +12,8 @@ import {
   NavbarMenuItem,
 } from "@heroui/navbar";
 import { Button } from "@heroui/button";
-import { Kbd } from "@heroui/kbd";
+import { Divider } from "@heroui/react";
 import { Link } from "@heroui/link";
-import { Input } from "@heroui/input";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
@@ -26,6 +25,7 @@ import {
   HeartFilledIcon,
   Logo,
 } from "@/components/icons";
+import { fontSans2 } from "@/config/fonts";
 
 export const Navbar = () => {
   const pathname = usePathname();
@@ -37,10 +37,16 @@ export const Navbar = () => {
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
-            <p className="font-bold text-inherit">AlphaLabs</p>
+            <p className={clsx(
+              "font-bold text-inherit",
+              fontSans2.className,
+            )}>AlphaLabs</p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden md:flex gap-4 justify-start ml-2">
+        <div className="hidden md:block pt-4 pb-4 h-full mr-2 ml-2">
+          <Divider orientation="vertical" />
+        </div>
+        <ul className="hidden md:flex gap-4 justify-start">
           {siteConfig.navItems.map((item) => {
             const isActive = pathname === item.href;
             return (<NavbarItem key={item.href} isActive={isActive}>
