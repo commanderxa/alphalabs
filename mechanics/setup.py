@@ -1,3 +1,7 @@
+import re
+import sys
+
+
 def install_packages_colab():
     import distutils.util
     import os
@@ -24,10 +28,10 @@ def install_packages_colab():
         """)
 
     print('Installing dm_control...')
-    !pip install -q dm_control>=1.0.22
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "dm_control>=1.0.22"])
 
     # Configure dm_control to use the EGL rendering backend (requires GPU)
-    %env MUJOCO_GL=egl 
+    os.environ["MUJOCO_GL"] = "egl"
 
     print('Checking that the dm_control installation succeeded...')
     try:
@@ -43,11 +47,19 @@ def install_packages_colab():
     else:
         del pixels, suite
 
-    !echo Installed dm_control $(pip show dm_control | grep -Po "(?<=Version: ).+")
+    version_output = subprocess.check_output(["pip", "show", "dm_control"]).decode("utf-8")
+    match = re.search(r"^Version:\s*([\S]+)", version_output, re.MULTILINE)
+    if match:
+        print(f"Installed dm_control {match.group(1)}")
+    else:
+        print("dm_control version not found.")
 
     # Graphics and plotting.
     print('Installing mediapy:')
-    !command -v ffmpeg >/dev/null || (apt update && apt install -y ffmpeg)
-    !pip install -q mediapy
-
-    !git clone https://github.com/commanderxa/alphalabs.git
+    try:
+        subprocess.check_call("command -v ffmpeg", shell=True)
+    except subprocess.CalledProcessError:
+        subprocess.check_call(["apt", "update"])
+        subprocess.check_call(["apt", "install", "-y", "ffmpeg"])
+    
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "mediapy"])
