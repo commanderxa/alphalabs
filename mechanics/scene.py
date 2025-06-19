@@ -8,8 +8,11 @@ class Scene(object):
         self,
         length: float,
         width: float = None,
+        platform: bool = True,
+        light: bool = True,
         reflectance: float = 0.3,
         condim: int = 1,
+        friction: str = "1 0.005 0.0001",
     ) -> None:
         self.model = mjcf.RootElement(model="scene")
 
@@ -63,22 +66,25 @@ class Scene(object):
             reflectance=reflectance,
         )
         # ground
-        self.model.worldbody.add(
-            "geom",
-            name="platform",
-            type="plane",
-            pos=[0, 0, 0],
-            size=[self.length, self.width, 1],
-            material=grid,
-            rgba=[1, 1, 1, 1],
-            condim=condim,
-        )
+        if platform:
+            self.model.worldbody.add(
+                "geom",
+                name="platform",
+                type="plane",
+                pos=[0, 0, 0],
+                size=[self.length, self.width, 1],
+                material=grid,
+                rgba=[1, 1, 1, 1],
+                condim=condim,
+                friction=friction,
+            )
         # light
-        self.model.worldbody.add(
-            "light",
-            name="light",
-            directional=False,
-            diffuse=[0.8, 0.8, 0.8],
-            pos=[0, 0, self.length],
-            dir=[0, 0, -1],
-        )
+        if light:
+            self.model.worldbody.add(
+                "light",
+                name="light",
+                directional=False,
+                diffuse=[0.8, 0.8, 0.8],
+                pos=[0, 0, self.length],
+                dir=[0, 0, -1],
+            )

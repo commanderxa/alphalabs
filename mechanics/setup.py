@@ -3,7 +3,6 @@ import sys
 
 
 def install_packages_colab():
-    import distutils.util
     import os
     import subprocess
     if subprocess.run('nvidia-smi').returncode:
