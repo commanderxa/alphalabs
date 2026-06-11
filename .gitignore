@@ -162,8 +162,7 @@ cython_debug/
 .idea/
 
 # Project
-/output/*
-!/output/*.md
+/output
 
 MUJOCO_LOG.TXT
 

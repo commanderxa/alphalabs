@@ -1,6 +1,7 @@
-numpy
-matplotlib
-seaborn
-mediapy
-dm_control
-ipykernel
+mujoco==3.8.1
+dm-control==1.0.41
+ipykernel==7.2.0
+matplotlib==3.10.9
+mediapy==1.2.6
+numpy==2.4.6
+seaborn==0.13.2
