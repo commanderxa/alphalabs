@@ -1,10 +1,36 @@
-# Alpha Labs
+<div align="center">
+  <img src="media/header.svg" width="100%" alt="Project Header">
+</div>
 
-This repository represents a research project.
+<div>
+   <a href="https://www.python.org/">
+      <img src="https://img.shields.io/badge/Python-002C76?style=for-the-badge&logo=python&logoColor=white">
+   </a>
+   <a href="https://numpy.org/">
+      <img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white">
+   </a>
+   <a href="https://jupyter.org/">
+    <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white">
+    </a>
+    <a href="https://colab.research.google.com/">
+        <img src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white">
+    </a>
+   <a href="https://docs.astral.sh/uv/">
+      <img src="https://img.shields.io/badge/uv-7A47A7?style=for-the-badge&logo=uv&logoColor=white">
+   </a>
+</div>
 
-Physics Simulations as an additonal approach to Study Physics. They are intended to be covered as an extra assignments before laboratory works.
+<br>
+
+# ALPHA Labs
+
+This repository represents a research project in physics simulations for education as an additonal approach to study physics. These simulations are intended to be covered as an extra assignments, e.g. before laboratory experiments.
+
+The simulations present Jupyter Notebooks with code for specific simulations. Since the simulation code in this repository does not contain any tasks to do, the intended way to interact with the code is to run each code cell sequentially in their respective order (top-to-bottom).
 
 # Run
+
+There are two options to run the code. Remotely online (on the server) and locally on a device, which requires installation of the project.
 
 ## Google Colab
 
@@ -13,6 +39,8 @@ Physics Simulations as an additonal approach to Study Physics. They are intended
 Please visit the [website](https://commanderxa.github.io/alphalabs/collection) of the project with collection of simulations to open them in Google Colab.
 
 ## Locally
+
+Altough modern computers feature more RAM, in a case it won't be enough try setting `HEIGHT` and `WIDTH` as well as `FRAMERATE` to lower values.
 
 ### Setup
 
@@ -39,7 +67,6 @@ Install required packages:
 ```sh
 pip install -r requirements.txt
 ```
-
 
 # License
 
