@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="media/header.svg" width="100%" alt="Project Header">
-</div>
+# ALPHA Labs
 
 <div>
    <a href="https://www.python.org/">
@@ -21,8 +19,6 @@
 </div>
 
 <br>
-
-# ALPHA Labs
 
 This repository represents a research project in physics simulations for education as an additonal approach to study physics. These simulations are intended to be covered as an extra assignments, e.g. before laboratory experiments.
 
