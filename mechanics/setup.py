@@ -27,7 +27,11 @@ def install_packages_colab():
         """)
 
     print('Installing dm_control...')
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "dm_control>=1.0.22"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "dm_control==1.0.41"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "mujoco==3.8.1"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib==3.10.9"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "numpy==2.4.6"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "seaborn==0.13.2"])
 
     # Configure dm_control to use the EGL rendering backend (requires GPU)
     os.environ["MUJOCO_GL"] = "egl"
@@ -61,4 +65,4 @@ def install_packages_colab():
         subprocess.check_call(["apt", "update"])
         subprocess.check_call(["apt", "install", "-y", "ffmpeg"])
     
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "mediapy"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "mediapy==1.2.6"])
