@@ -6,6 +6,8 @@ import { Card, Separator, buttonVariants } from "@heroui/react";
 import { collectionConfig } from "@/config/collection";
 import { ColabIcon } from "@/components/colab-icon";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function CollectionPage() {
   return (
     <div>
@@ -26,7 +28,7 @@ export default function CollectionPage() {
                       alt={sim.name}
                       className="pointer-events-none object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                       fill
-                      src={`/assets/collection/${sim.img}`}
+                      src={`${basePath}/assets/collection/${sim.img}`}
                     />
                   </div>
 

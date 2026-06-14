@@ -15,13 +15,16 @@ type StructureItem = {
   image: string;
 };
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+console.log(basePath);
+
 const simulationStructure: StructureItem[] = [
   {
     id: "setup",
     label: "Setup",
     description:
       "Configure the MuJoCo rendering backend, import libraries for physics simulation, media recording, numerical computation, and data visualization.",
-    image: "/assets/home/preview_no_scene.jpg",
+    image: `${basePath}/assets/home/preview_no_scene.jpg`,
     code: [
       "%env MUJOCO_GL=egl",
       "from dm_control import mjcf",
@@ -37,7 +40,7 @@ const simulationStructure: StructureItem[] = [
     label: "Define parameters",
     description:
       "Set simulation flags, initial kinematic state, platform geometry, integrator type and timestep, render resolution, and experiment duration.",
-    image: "/assets/home/preview_no_scene.jpg",
+    image: `${basePath}/assets/home/preview_no_scene.jpg`,
     code: [
       "IS_IDEAL = True",
       "V = 0  # initial velocity [m/s]",
@@ -57,7 +60,7 @@ const simulationStructure: StructureItem[] = [
     label: "Build scene model",
     description:
       "Construct the static environment as an MJCF model — a flat platform with configurable length, width, contact dimensionality, and friction. Attach the scene to the world body via a site.",
-    image: "/assets/home/preview_scene.jpg",
+    image: `${basePath}/assets/home/preview_scene.jpg`,
     code: [
       "class Model(object):",
 
@@ -79,7 +82,7 @@ const simulationStructure: StructureItem[] = [
     label: "Build object model",
     description:
       "Define the Box entity with its geometry, camera, and two degrees of freedom: a horizontal sliding joint and a vertical falling joint. Attach the box to the world model above the platform surface.",
-    image: "/assets/home/preview_world.jpg",
+    image: `${basePath}/assets/home/preview_world.jpg`,
     code: [
       "class Box(object):",
       "    def __init__(self, size, condim, friction)",
@@ -103,7 +106,7 @@ const simulationStructure: StructureItem[] = [
     label: "Build world model & initialize physics",
     description:
       "Compile the world model into an executable physics instance, render a preview frame, and save it.",
-    image: "/assets/home/preview_world.jpg",
+    image: `${basePath}/assets/home/preview_world.jpg`,
     code: [
       "model = Model(SIZE, PLATFORM_LENGTH).model",
       "physics = mjcf.Physics.from_mjcf_model(model)",
@@ -117,7 +120,7 @@ const simulationStructure: StructureItem[] = [
     label: "Run simulation loop",
     description:
       "Reset state, apply the initial velocity, then step forward in time incrementing velocity, capturing kinematic trajectories and frames.",
-    image: "/assets/home/simulation.mp4",
+    image: `${basePath}/assets/home/simulation.mp4`,
     code: [
       "physics.reset()",
       "# set initial velocity",
@@ -140,7 +143,7 @@ const simulationStructure: StructureItem[] = [
     label: "Analyze outputs",
     description:
       "Plot velocity and position over time as two stacked subplots using Seaborn, with labeled axes and high-resolution export.",
-    image: "/assets/home/data_analysis.jpg",
+    image: `${basePath}/assets/home/data_analysis.jpg`,
     code: [
       "fig, ax = plt.subplots(2, figsize=figsize, dpi=DPI)",
       "fig.subplots_adjust(wspace=1 * cm)",

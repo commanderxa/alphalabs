@@ -8,6 +8,8 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/assets/favicon.svg",
+    icon: `${basePath}/assets/favicon.svg`,
   },
 };
 
