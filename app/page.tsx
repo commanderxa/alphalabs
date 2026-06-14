@@ -38,17 +38,20 @@ export default function Home() {
             </code>
           </Link>
 
-          <span className="text-sm text-default-500 sm:pb-0.5">powered by</span>
-
-          <Link
-            href={siteConfig.links.mujoco}
-            className="inline-flex items-center"
-            target="_blank"
-          >
-            <code className="rounded-medium bg-primary/10 px-2 py-1 font-mono font-bold text-primary">
-              MuJoCo
-            </code>
-          </Link>
+          <span>
+            <span className="text-sm text-default-500 sm:pb-0.5">
+              powered by
+            </span>
+            <Link
+              href={siteConfig.links.mujoco}
+              className="inline-flex items-center"
+              target="_blank"
+            >
+              <code className="rounded-medium bg-primary/10 px-2 py-1 font-mono font-bold text-primary">
+                MuJoCo
+              </code>
+            </Link>
+          </span>
         </div>
       </div>
 

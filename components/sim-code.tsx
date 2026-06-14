@@ -294,24 +294,24 @@ export function SimulationStructureBlock() {
             </Link>
 
             {isLastStep ? (
-            <Link
-              onClick={resetSteps}
-              className={`${buttonVariants({
-                variant: "danger-soft",
-              })} sm:hidden w-full`}
-            >
-              Reset
-            </Link>
-          ) : (
-            <Link
-              onClick={goNext}
-              className={`${buttonVariants({
-                variant: "secondary",
-              })} sm:hidden w-full`}
-            >
-              Next
-            </Link>
-          )}
+              <Link
+                onClick={resetSteps}
+                className={`${buttonVariants({
+                  variant: "danger-soft",
+                })} sm:hidden w-full`}
+              >
+                Reset
+              </Link>
+            ) : (
+              <Link
+                onClick={goNext}
+                className={`${buttonVariants({
+                  variant: "secondary",
+                })} sm:hidden w-full`}
+              >
+                Next
+              </Link>
+            )}
           </div>
 
           <div className="overflow-hidden rounded-2xl border border-default-200 bg-surface shadow-sm">
@@ -331,42 +331,26 @@ export function SimulationStructureBlock() {
             </div>
 
             <div className="overflow-x-auto">
-              {/* <pre className="min-w-0 p-4 text-xs leading-6 sm:p-6 sm:text-sm"> */}
-              {/* <code className="block font-mono">
-                  {step.code.map((line, index) => (
-                    <div
-                      key={`${step.id}-${index}`}
-                      className="grid grid-cols-[auto_1fr] gap-4 rounded-xl px-3 py-1.5 hover:bg-default-50/80"
-                    >
-                      <span className="select-none text-right text-xs tabular-nums text-default-400">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span className="whitespace-pre text-foreground">
-                        {line}
-                      </span>
-                    </div>
-                    ))}
-                    </code> */}
-              {/* </pre> */}
               <SyntaxHighlighter
                 language="python"
                 style={oneDark}
                 showLineNumbers
+                wrapLines
                 wrapLongLines
                 customStyle={{
                   margin: 0,
                   borderRadius: "1rem",
-                  padding: "1.25rem",
-                  fontSize: "0.875rem",
-                  lineHeight: 1.7,
+                  padding: "0.75rem",
+                  fontSize: "0.75rem",
+                  lineHeight: 1.6,
                   background: "transparent",
                 }}
-                lineNumberStyle={{
-                  minWidth: "2.5em",
-                  paddingRight: "1rem",
-                  color: "#6b7280",
-                  textAlign: "right",
-                  userSelect: "none",
+                lineProps={{
+                  style: {
+                    wordBreak: "break-word",
+                    whiteSpace: "pre-wrap",
+                    flexWrap: "wrap",
+                  },
                 }}
                 codeTagProps={{
                   style: {
