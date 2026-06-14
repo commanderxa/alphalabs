@@ -12,14 +12,14 @@ export const collectionConfig = {
           description:
             "Explores linear motion along a single axis, illustrating concepts like uniform motion and constant acceleration.",
           img: "kinematics_1.png",
-          href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/kinematics/1d_motion.ipynb",
+          href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/kinematics/1D_motion.ipynb",
         },
         {
           name: "2D Motion",
           description:
             "Examines motion in a plane, including projectile motion and the independence of horizontal and vertical components.",
           img: "kinematics_2.png",
-          href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/kinematics/2d_motion.ipynb",
+          href: "https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/kinematics/2D_motion.ipynb",
         },
         {
           name: "Free Fall",
