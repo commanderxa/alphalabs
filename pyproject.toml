@@ -11,5 +11,6 @@ dependencies = [
     "matplotlib==3.10.9",
     "mediapy==1.2.6",
     "numpy==2.4.6",
+    "scipy==1.17.1",
     "seaborn==0.13.2",
 ]
