@@ -1,9 +1,7 @@
 import "@/styles/globals.css";
-
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 
-import { basePath } from "../next.config";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
@@ -17,7 +15,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: `${basePath}/favicon.svg`,
+    icon: "/assets/favicon.svg",
   },
 };
 
@@ -38,8 +36,8 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          "min-h-screen text-foreground bg-background font-sans antialiased",
+          fontSans.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
@@ -48,17 +46,17 @@ export default function RootLayout({
             <main className="container mx-auto max-w-7xl px-6 flex-grow">
               {children}
             </main>
-            {/* <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
+            <footer className="w-full flex items-center justify-center py-3">
+              <a
+                className="flex items-center gap-1 text-current no-underline"
                 href="https://heroui.com?utm_source=next-app-template"
-                title="heroui.com homepage"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">HeroUI</p>
-              </Link>
-            </footer> */}
+                <span className="text-muted">Powered by</span>
+                <p className="text-accent">HeroUI</p>
+              </a>
+            </footer>
           </div>
         </Providers>
       </body>

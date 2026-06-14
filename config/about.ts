@@ -1,18 +1,89 @@
-export type AboutConfig = typeof aboutConfig;
+export type TextPart =
+  | { type: "text"; value: string }
+  | { type: "link"; label: string; href: string; isExternal?: boolean };
+
+export type AboutGroup = {
+  name: string;
+  text: TextPart[];
+};
+
+export type AboutConfig = {
+  groups: AboutGroup[];
+  publications: {
+    name: string;
+    content: {
+      name: string;
+      link?: string;
+    }[];
+  };
+  faq: {
+    name: string;
+    content: {
+      question: string;
+      answer: string;
+    }[];
+  };
+};
+
 
 export const aboutConfig = {
   groups: [
     {
       name: "Project",
-      text: "AlphaLabs is an interactive platform built to enhance the physics learning experience for university students. It offers pre-laboratory simulations that visually demonstrate physics concepts and prepare students for hands-on labs. While these simulations are primerily designed for students majoring in Computer Science or for those who studied programming, any invidual who wants to utilize these simulations is welcomed too.",
+      text: [
+        {
+          // `as const` needed to prevent IDE error
+          type: "text" as const,
+          value:
+            "AlphaLabs is an interactive platform built to enhance the physics learning experience for university students. It offers pre-laboratory simulations that visually demonstrate physics concepts and prepare students for hands-on labs. While these simulations are primerily designed for students majoring in Computer Science or for those who studied programming, any invidual who wants to utilize these simulations is welcomed too.",
+        },
+      ],
     },
     {
       name: "Team",
-      text: "The team was composed of a student and a physics professor from Astana IT University.",
+      text: [
+        {
+          type: "text" as const,
+          value:
+            "The team comprised members from two institutions ",
+        },
+        {
+          type: "link" as const,
+          label: "Astana IT University",
+          href: "",
+        },
+        {
+          type: "text" as const,
+          value:
+            " and ",
+        },
+        {
+          type: "link" as const,
+          label: "Nazarbayev University",
+          href: "",
+        },
+        {
+          type: "text" as const,
+          value:
+            ".",
+        },
+      ],
     },
     {
       name: "License",
-      text: "AlphaLabs is licensed under the Apache License 2.0. You are free to use, modify, and distribute the software even for commercial use.",
+      text: [
+        {
+          type: "text" as const,
+          value:
+            "AlphaLabs is licensed under the Apache License 2.0. You are free to use, modify, and distribute the software even for commercial use. See the ",
+        },
+        {
+          type: "link" as const,
+          label: "LICENSE",
+          href: "https://github.com/commanderxa/alphalabs/blob/main/LICENSE",
+        },
+        { type: "text" as const, value: " file." },
+      ],
     },
   ],
   publications: {
@@ -23,8 +94,8 @@ export const aboutConfig = {
         link: "https://doi.org/10.1109/IEEECONF61558.2024.10585505",
       },
       {
-        name: "Coming soon!",
-        link: "",
+        name: "Leveraging MuJoCo Simulations for Enhanced Classical Mechanics Learning and Practical Application",
+        link: "https://doi.org/10.1002/cae.70218",
       },
     ],
   },

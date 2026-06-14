@@ -1,21 +1,16 @@
 "use client";
 
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
-import { Popover, PopoverTrigger, PopoverContent } from "@heroui/react";
-
-import NextLink from "next/link";
+import { Separator, Link, buttonVariants } from "@heroui/react";
 
 import { siteConfig } from "@/config/site";
+import { SimulationStructureBlock } from "@/components/sim-code";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 md:pt-20">
-      <div className="inline-block text-center justify-center">
+      <div className="inline-block text-center justify-center leading-none">
         <span className={title()}>Explore&nbsp;</span>
         <span className={title({ color: "blue" })}>Physics Concepts&nbsp;</span>
         <br />
@@ -24,66 +19,61 @@ export default function Home() {
           <br />
           Pre-Lab Simulations&nbsp;
         </span>
+
         <div className={subtitle({ class: "mt-4 mb-0" })}>
           Computer tool designed to prepare you for laboratory success.
         </div>
-        <span className="">
-          <span>powered by&nbsp;</span>
-          <span>
-            <Link as={NextLink} href={siteConfig.links.mujoco} isExternal>
-              <Code className="font-bold" color="primary">
-                MuJoCo
-              </Code>
-            </Link>
-          </span>
-        </span>
+
+        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-default-500 max-[412px]:flex-col max-[412px]:gap-1.5">
+          <Link
+            href={siteConfig.links.github}
+            target="_blank"
+            className="inline-flex items-center gap-2 text-sm text-default-500 transition-colors hover:text-foreground"
+          >
+            <GithubIcon size={16} />
+            <code className="rounded-medium bg-primary/10 px-2 py-1 font-mono font-bold text-primary">
+              Open source project
+            </code>
+          </Link>
+
+          <span className="text-sm text-default-500 sm:pb-0.5">powered by</span>
+
+          <Link
+            href={siteConfig.links.mujoco}
+            className="inline-flex items-center"
+            target="_blank"
+          >
+            <code className="rounded-medium bg-primary/10 px-2 py-1 font-mono font-bold text-primary">
+              MuJoCo
+            </code>
+          </Link>
+        </div>
       </div>
 
-      <div className="flex gap-3 mt-4">
-        <Popover placement="left" showArrow={true}>
-          <PopoverTrigger>
-            <Link
-              isExternal
-              className={buttonStyles({
-                color: "primary",
-                radius: "full",
-                variant: "solid",
-              })}
-              // href={"#"}
-            >
-              Publication
-            </Link>
-          </PopoverTrigger>
-          <PopoverContent>
-            <div className="px-1 py-2">
-              <div className="text-small font-bold">Coming soon!</div>
-              <div className="text-tiny">
-                A paper will be linked once published.
-              </div>
-            </div>
-          </PopoverContent>
-        </Popover>
+      <div className="mt-4 flex flex-wrap justify-center gap-3">
+        <Link
+          href={siteConfig.links.publication}
+          target="_blank"
+          className={buttonVariants({
+            variant: "primary",
+          })}
+        >
+          Publication
+        </Link>
 
         <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
+          href="/collection"
+          className={buttonVariants({
+            variant: "outline",
+          })}
         >
-          <GithubIcon size={20} />
-          GitHub
+          View simulations
         </Link>
       </div>
 
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by viewing the{" "}
-            <Link as={NextLink} href={"/collection"}>
-              <Code color="primary">collection</Code>
-            </Link>
-          </span>
-        </Snippet>
-      </div>
+      <Separator className="my-4 mt-8 w-full max-w-5xl" />
+
+      <SimulationStructureBlock />
     </section>
   );
 }
