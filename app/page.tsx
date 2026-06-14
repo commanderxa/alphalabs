@@ -7,6 +7,8 @@ import { SimulationStructureBlock } from "@/components/sim-code";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 md:pt-20">
@@ -62,7 +64,7 @@ export default function Home() {
         </Link>
 
         <Link
-          href="/collection"
+          href={`${basePath}/collection`}
           className={buttonVariants({
             variant: "outline",
           })}

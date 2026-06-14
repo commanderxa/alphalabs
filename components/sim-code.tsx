@@ -386,6 +386,7 @@ export function SimulationStructureBlock() {
             <b>
               <a
                 className="text-accent"
+                target="_blank"
                 href="https://colab.research.google.com/github/commanderxa/alphalabs/blob/main/mechanics/kinematics/1d_motion.ipynb"
               >
                 1D motion simulation
